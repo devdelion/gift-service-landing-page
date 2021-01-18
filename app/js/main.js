@@ -70,31 +70,6 @@ function scrollTop() {
 window.addEventListener('scroll', scrollTop)
 
 
-/* DARK LIGHT THEME */
-const themeButton = document.getElementById('theme-button'),
-    darkTheme = 'dark-theme',
-    iconTheme = 'bx-toggle-right';
-
-const selectedTheme = localStorage.getItem('selected-theme'),
-    selectedIcon = localStorage.getItem('selected-icon');
-
-const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light';
-const getCurrentIcon = () => document.body.classList.contains(iconTheme) ? 'bx-toggle-left' : 'bx-toggle-right';
-
-if (selectedTheme) {
-    document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme);
-    document.body.classList[selectedIcon === 'bx-toggle-left' ? 'add' : 'remove'](iconTheme);
-}
-
-themeButton.addEventListener('click', () => {
-    document.body.classList.toggle(darkTheme);
-    themeButton.classList.toggle(iconTheme);
-
-    localStorage.setItem('selected-theme', getCurrentTheme());
-    localStorage.setItem('selected-icon', getCurrentIcon());
-})
-
-
 /* SCROLL REVEAL ANIMATION */
 const sr = ScrollReveal({
     distance: '30px',

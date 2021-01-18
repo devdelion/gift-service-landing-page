@@ -1,0 +1,25 @@
+/* BUTTONS */
+.button {
+    display: inline-block;
+    background-color: $first-color;
+    color: #fff;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: $font-semi-bold;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background-color: $first-color-alt;
+}
+
+.button-link {
+    background: none;
+    padding: 0;
+    color: $first-color;
+}
+
+.button-link:hover {
+    background-color: transparent;
+    color: $first-color-alt;
+}

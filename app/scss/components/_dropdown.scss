@@ -1,0 +1,25 @@
+/* SHOW MENU */
+.show-menu {
+    top: calc(#{$header-height} + 1rem);
+}
+
+/* ACTIVE MENU LINK */
+.active-link {
+    position: relative;
+}
+
+.active-link::before {
+    content: "";
+    position: absolute;
+    bottom: -0.75rem;
+    left: 45%;
+    width: 5px;
+    height: 5px;
+    background-color: $title-color;
+    border-radius: 50%;
+}
+
+/* CHANGE BACKGROUND HEADER */
+.scroll-header {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
